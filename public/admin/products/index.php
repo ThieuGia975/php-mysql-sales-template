@@ -112,7 +112,7 @@ require_once '/var/www/src/includes/admin/navbar.php';
 
                     <td class="text-center">
                         <div class="d-flex justify-content-center gap-1">
-                            <a href="/products/edit.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm btn-warning">
+                            <a href="/admin/products/edit.php?id=<?= $product['ProductID'] ?>" class="btn btn-sm btn-warning">
                                 Sửa
                             </a>
 
