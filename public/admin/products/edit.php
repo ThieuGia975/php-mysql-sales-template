@@ -10,7 +10,7 @@ $error = '';
 $productID = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
 if ($productID <= 0) {
-    header('Location: /products/');
+    header('Location: /admin/products/');
     exit;
 }
 
@@ -24,7 +24,7 @@ $product = $resultProduct->fetch_assoc();
 $stmtProduct->close();
 
 if (!$product) {
-    header('Location: /products/');
+    header('Location: /admin/products/');
     exit;
 }
 
@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 $stmt->close();
                 $conn->close();
-                header('Location: /products/');
+                header('Location: /admin/products/');
                 exit;
             }
 
@@ -127,8 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $selectedCategoryID = $_POST['category_id'] ?? $product['CategoryID'];
 $selectedSupplierID = $_POST['supplier_id'] ?? $product['SupplierID'];
 
-require_once '/var/www/src/includes/header.php';
-require_once '/var/www/src/includes/navbar.php';
+require_once '/var/www/src/includes/admin/header.php';
+require_once '/var/www/src/includes/admin/navbar.php';
 ?>
 
 <div class="container mt-4">
@@ -228,6 +228,6 @@ require_once '/var/www/src/includes/navbar.php';
 </div>
 
 <?php
-require_once '/var/www/src/includes/footer.php';
+require_once '/var/www/src/includes/admin/footer.php';
 $conn->close();
 ?>

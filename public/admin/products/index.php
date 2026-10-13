@@ -33,8 +33,8 @@ $sql = "
 
 $result = $conn->query($sql);
 
-require_once '/var/www/src/includes/header.php';
-require_once '/var/www/src/includes/navbar.php';
+require_once '/var/www/src/includes/admin/header.php';
+require_once '/var/www/src/includes/admin/navbar.php';
 
 ?>
 
@@ -43,7 +43,7 @@ require_once '/var/www/src/includes/navbar.php';
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Quản lý sản phẩm</h2>
 
-        <a href="/products/create.php" class="btn btn-primary">
+        <a href="/admin/products/create.php" class="btn btn-primary">
             Thêm sản phẩm
         </a>
     </div>
@@ -116,7 +116,7 @@ require_once '/var/www/src/includes/navbar.php';
                                 Sửa
                             </a>
 
-                            <form action="/products/delete.php" 
+                            <form action="/admin/products/delete.php" 
                                   method="post" 
                                   class="d-inline"
                                   onsubmit="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">
@@ -141,6 +141,6 @@ require_once '/var/www/src/includes/navbar.php';
 </div>
 
 <?php
-require_once '/var/www/src/includes/footer.php';
+require_once '/var/www/src/includes/admin/footer.php';
 $conn->close();
 ?>
