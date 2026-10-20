@@ -158,14 +158,32 @@ require_once '/var/www/src/includes/frontend/navbar.php';
             Giỏ hàng của bạn đang trống.
         </div>
 
-        <a
-            href="/products.php"
-            class="btn btn-primary"
+        <div
+            class="d-flex
+                justify-content-between
+                align-items-center
+                mt-4"
         >
-            Tiếp tục mua hàng
-        </a>
+            <a
+                href="/products.php"
+                class="btn btn-outline-secondary"
+            >
+                Tiếp tục mua hàng
+            </a>
 
+        </div>
     <?php else: ?>
+        <div
+            class="d-flex justify-content-end mt-3"
+        >
+            <a
+                href="/checkout.php"
+                class="btn btn-success"
+            >
+                Tiến hành đặt hàng
+    </a>
+
+    </div>
 
         <form method="post" action="/cart.php">
 
@@ -347,7 +365,15 @@ require_once '/var/www/src/includes/frontend/navbar.php';
 
             </div>
 
-            <div class="d-flex justify-content-end mt-3">
+            <div class="d-flex justify-content-between align-items-center mt-3">
+
+                <a
+                    href="/products.php"
+                    class="btn btn-outline-secondary"
+                >
+                    <i class="bi bi-arrow-left"></i>
+                    Tiếp tục mua hàng
+                </a>
 
                 <button
                     type="submit"
@@ -356,21 +382,9 @@ require_once '/var/www/src/includes/frontend/navbar.php';
                 >
                     Cập nhật giỏ hàng
                 </button>
+</div>
 
-            </div>
-
-        </form>
-
-        <div class="mt-4">
-
-            <a
-                href="/products.php"
-                class="btn btn-outline-secondary"
-            >
-                Tiếp tục mua hàng
-            </a>
-
-        </div>
+</form>
 
     <?php endif; ?>
 

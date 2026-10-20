@@ -9,6 +9,7 @@ services:
       - ./public:/var/www/html
       - ./src:/var/www/src
     environment:
+      TZ: Asia/Ho_Chi_Minh
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
@@ -19,6 +20,7 @@ services:
     ports:
       - "127.0.0.1:3307:3306"
     environment:
+      TZ: Asia/Ho_Chi_Minh
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
