@@ -179,7 +179,9 @@ require_once '/var/www/src/includes/admin/navbar.php';
 
                 <div class="d-flex gap-2">
                     <button type="submit" class="btn btn-primary">Lưu sản phẩm</button>
-                    <a href="/products/" class="btn btn-secondary">Hủy</a>
+                    <a href="/products/index.php" class="btn btn-secondary">
+                        Hủy
+                    </a>
                 </div>
             </form>
         </div>
