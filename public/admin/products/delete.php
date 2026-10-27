@@ -1,7 +1,7 @@
 <?php
 
 // Dùng __DIR__ để xác định chính xác đường dẫn tuyệt đối đến file database.php
-require_once __DIR__ . '/../../src/config/database.php';
+require_once '/var/www/src/config/database.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: /admin/products/');

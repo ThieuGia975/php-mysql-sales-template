@@ -1,12 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="/admin/">Sales Management</a>
+        <a class="navbar-brand" href="/admin/index.php">
+            Sales Management
+        </a>
 
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
         >
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +20,9 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/index/">Trang chủ</a>
+                    <a class="nav-link" href="/admin/index.php">
+                        Trang chủ
+                    </a>
                 </li>
 
                 <li class="nav-item">

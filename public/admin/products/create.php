@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // TẤT CẢ THÀNH CÔNG -> HOÀN TẤT TRANSACTION
             $conn->commit();
 
-            header('Location: /products/index.php?msg=created');
+            header('Location: /admin/products/?msg=created');
             exit();
 
         } catch (Throwable $e) {
@@ -143,7 +143,7 @@ require_once '/var/www/src/includes/admin/navbar.php';
         <div class="col-md-8">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">Thêm sản phẩm mới (Lưu nhiều ảnh)</h4>
+                    <h4 class="mb-0">Thêm sản phẩm mới</h4>
                 </div>
                 <div class="card-body">
 
@@ -237,7 +237,7 @@ require_once '/var/www/src/includes/admin/navbar.php';
                         </div>
 
                         <div class="d-flex justify-content-end gap-2">
-                            <a href="/products/index.php" class="btn btn-secondary">Hủy</a>
+                            <a href="/admin/products/" class="btn btn-secondary">Hủy</a>
                             <button type="submit" class="btn btn-primary fw-bold">Lưu sản phẩm</button>
                         </div>
 
